@@ -64,6 +64,16 @@ CMAKE_BINARY_DIR = C:\Users\sibmf\Desktop\3514\a4_sort\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	"C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -128,12 +138,26 @@ a4_sort/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a4_sort.dir\build.make CMakeFiles/a4_sort.dir/build
 .PHONY : a4_sort/fast
 
+#=============================================================================
+# Target rules for targets named my_test
+
+# Build rule for target.
+my_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 my_test
+.PHONY : my_test
+
+# fast build rule for target.
+my_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/build
+.PHONY : my_test/fast
+
 src/array_bounds.obj: src/array_bounds.cpp.obj
 .PHONY : src/array_bounds.obj
 
 # target to build an object file
 src/array_bounds.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a4_sort.dir\build.make CMakeFiles/a4_sort.dir/src/array_bounds.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/src/array_bounds.cpp.obj
 .PHONY : src/array_bounds.cpp.obj
 
 src/array_bounds.i: src/array_bounds.cpp.i
@@ -142,6 +166,7 @@ src/array_bounds.i: src/array_bounds.cpp.i
 # target to preprocess a source file
 src/array_bounds.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a4_sort.dir\build.make CMakeFiles/a4_sort.dir/src/array_bounds.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/src/array_bounds.cpp.i
 .PHONY : src/array_bounds.cpp.i
 
 src/array_bounds.s: src/array_bounds.cpp.s
@@ -150,6 +175,7 @@ src/array_bounds.s: src/array_bounds.cpp.s
 # target to generate assembly for a file
 src/array_bounds.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a4_sort.dir\build.make CMakeFiles/a4_sort.dir/src/array_bounds.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/src/array_bounds.cpp.s
 .PHONY : src/array_bounds.cpp.s
 
 src/main.obj: src/main.cpp.obj
@@ -176,6 +202,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a4_sort.dir\build.make CMakeFiles/a4_sort.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+tests/test.obj: tests/test.cpp.obj
+.PHONY : tests/test.obj
+
+# target to build an object file
+tests/test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/tests/test.cpp.obj
+.PHONY : tests/test.cpp.obj
+
+tests/test.i: tests/test.cpp.i
+.PHONY : tests/test.i
+
+# target to preprocess a source file
+tests/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/tests/test.cpp.i
+.PHONY : tests/test.cpp.i
+
+tests/test.s: tests/test.cpp.s
+.PHONY : tests/test.s
+
+# target to generate assembly for a file
+tests/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/tests/test.cpp.s
+.PHONY : tests/test.cpp.s
+
 # Help Target
 help:
 	@echo The following are some of the valid targets for this Makefile:
@@ -184,13 +234,18 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... a4_sort
+	@echo ... my_test
 	@echo ... src/array_bounds.obj
 	@echo ... src/array_bounds.i
 	@echo ... src/array_bounds.s
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
+	@echo ... tests/test.obj
+	@echo ... tests/test.i
+	@echo ... tests/test.s
 .PHONY : help
 
 

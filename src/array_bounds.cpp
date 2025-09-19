@@ -23,51 +23,51 @@
      return ub - lb;
  }
  int lower_bound_recursive(const int* arr, int low, int high, int target){
-    if (low >= high)
+    if (low >= high) // base case
         return low;
-    int mid{(low+high) / 2};
+    int mid{(low+high) / 2}; // readjust the mid
     if (arr[mid] >= target)
-        return lower_bound_recursive(arr,low,mid,target);
+        return lower_bound_recursive(arr,low,mid,target); // first half
     else
-        return lower_bound_recursive(arr,mid+1,high,target);
+        return lower_bound_recursive(arr,mid+1,high,target); // secound half
  }
  int lower_bound(const int* arr, int n, int target){
     return lower_bound_recursive(arr, 0,n,target);
  }
 
 int upper_bound_recursive(const int* arr, int low, int high, int target){
-    if (low == high)
+    if (low == high) // base case
         return low;
-    int mid{(low+high) / 2};
+    int mid{(low+high) / 2}; // readjust the mid
     if (arr[mid] <= target)
-        return upper_bound_recursive(arr,mid+1,high,target);
+        return upper_bound_recursive(arr,mid+1,high,target); // secound half
     else
-        return upper_bound_recursive(arr,low,mid,target);
+        return upper_bound_recursive(arr,low,mid,target); // first half
  }
   int upper_bound(const int* arr, int n, int target){
     return upper_bound_recursive(arr, 0,n,target);
  }
- int lower_bound_iterative(const int* arr, int n, int target){
+ int lower_bound_iterative(const int* arr, int n, int target){// sorts by adjusting the low counter
     int low = 0;
     int high = n;
     while (low < high){
         int mid{(low+high) / 2};
         if (arr[mid] >= target)
-            high = mid;
+            high = mid; // if the target is in the second half
         else
-            low = mid + 1;
+            low = mid + 1;// if the target is in the first half
     }
     return low;
  }
-  int upper_bound_iterative(const int* arr, int n, int target){
+  int upper_bound_iterative(const int* arr, int n, int target){ // sorts by adjusting the high counter
     int low = 0;
     int high = n;
     while (low < high){
         int mid{(low+high) / 2};
-        if (arr[mid] <= target)
+        if (arr[mid] <= target) // if target is in the second half
             low = mid + 1;
         else
-            high = mid;
+            high = mid; // if target is in the first half
     }
     return low;
   }

@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/my_test.dir/src/array_bounds.cpp.obj"
+  "CMakeFiles/my_test.dir/src/array_bounds.cpp.obj.d"
   "CMakeFiles/my_test.dir/tests/test.cpp.obj"
   "CMakeFiles/my_test.dir/tests/test.cpp.obj.d"
   "libmy_test.dll.a"

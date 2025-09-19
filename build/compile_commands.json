@@ -10,5 +10,17 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/a4_sort.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\a4_sort.dir\\src\\array_bounds.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a4_sort\\src\\array_bounds.cpp",
   "file": "C:/Users/sibmf/Desktop/3514/a4_sort/src/array_bounds.cpp",
   "output": "CMakeFiles/a4_sort.dir/src/array_bounds.cpp.obj"
+},
+{
+  "directory": "C:/Users/sibmf/Desktop/3514/a4_sort/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/my_test.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\my_test.dir\\src\\array_bounds.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a4_sort\\src\\array_bounds.cpp",
+  "file": "C:/Users/sibmf/Desktop/3514/a4_sort/src/array_bounds.cpp",
+  "output": "CMakeFiles/my_test.dir/src/array_bounds.cpp.obj"
+},
+{
+  "directory": "C:/Users/sibmf/Desktop/3514/a4_sort/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/my_test.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\my_test.dir\\tests\\test.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a4_sort\\tests\\test.cpp",
+  "file": "C:/Users/sibmf/Desktop/3514/a4_sort/tests/test.cpp",
+  "output": "CMakeFiles/my_test.dir/tests/test.cpp.obj"
 }
 ]
