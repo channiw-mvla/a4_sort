@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\a3_reversal.dir/objects.a
+C:\msys64\mingw64\bin\ar.exe qc CMakeFiles\a3_reversal.dir/objects.a @CMakeFiles\a3_reversal.dir\objects1.rsp
+C:\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\a3_reversal.dir/objects.a -Wl,--no-whole-archive -o a3_reversal.exe -Wl,--out-implib,liba3_reversal.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\a3_reversal.dir\linkLibs.rsp

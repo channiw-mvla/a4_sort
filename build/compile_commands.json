@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/sibmf/Desktop/3514/a4_sort/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/a4_sort.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\a4_sort.dir\\src\\main.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a4_sort\\src\\main.cpp",
+  "file": "C:/Users/sibmf/Desktop/3514/a4_sort/src/main.cpp",
+  "output": "CMakeFiles/a4_sort.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/sibmf/Desktop/3514/a4_sort/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/a4_sort.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\a4_sort.dir\\src\\array_bounds.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a4_sort\\src\\array_bounds.cpp",
+  "file": "C:/Users/sibmf/Desktop/3514/a4_sort/src/array_bounds.cpp",
+  "output": "CMakeFiles/a4_sort.dir/src/array_bounds.cpp.obj"
+}
+]
